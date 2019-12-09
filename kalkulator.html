@@ -2,28 +2,45 @@
 	<head>
 		<title> Kalkulator Sederhana </title>
 		<style>
-
 		</style>
+
+		<script type="text/javascript" src="kalkulator.js">
+		</script>
 	</head>
-	
-<button> 1 </button>
-<button> 2 </button>
-<button> 3 </button>
-<button> : </button>
+
+	<body>
+		<form name="kalkulator">
+			<table>
+				<tr>
+					<td>
+						<input type="text" id="display" disabled>
+					</td>
+				</tr>
+			</table>
+		</form>
+
+<button onclick="kalkulator.display.value+='1'" value="1"> 1 </button>
+<button onclick="kalkulator.display.value+='2'" value="2"> 2 </button>
+<button onclick="kalkulator.display.value+='3'" value="3"> 3 </button>
+<button onclick="kalkulator.display.value+='/'" value="/"> : </button>
 <br>
-<button> 4 </button>
-<button> 5 </button>
-<button> 6 </button>
-<button> X </button>
+<button onclick="kalkulator.display.value+='4'"> 4 </button>
+<button onclick="kalkulator.display.value+='5'"> 5 </button>
+<button onclick="kalkulator.display.value+='6'"> 6 </button>
+<button onclick="kalkulator.display.value+='*'"> X </button>
 <br>
-<button> 7 </button>
-<button> 8 </button>
-<button> 9 </button>
-<button> - </button>
+<button onclick="kalkulator.display.value+='7'"> 7 </button>
+<button onclick="kalkulator.display.value+='8'"> 8 </button>
+<button onclick="kalkulator.display.value+='9'"> 9 </button>
+<button onclick="kalkulator.display.value+='-'"> - </button>
 <br>
-<button> 0 </button>
-<button> . </button>
-<button> = </button>
-<button> + </button>
+<button onclick="kalkulator.display.value+='0'"> 0 </button>
+<button onclick="kalkulator.display.value+='.'"> . </button>
+<button onclick="kalkulator.display.value =eval(kalkulator.display.value)"> = </button>
+<button onclick="kalkulator.display.value+='+'"> + </button>
+<br>
+<button onclick="kalkulator.display.value =''"> AC </button>
+
+	</body>
 
 </html>
